@@ -1,0 +1,109 @@
+.App {
+  display: grid;
+}
+
+
+@media only screen and (max-width: 600px){
+  nav {
+    /*border: 1px black solid;*/
+
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fe6d73;
+    color: whitesmoke;
+
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    font-stretch: extra-expanded;
+  }
+
+  #menu-icon{
+    width: 10px;
+  }
+
+  .main-container {
+    margin: 50px 5px 0 5px;
+    padding: 20px 5px;
+    /*height: 150vh;*/
+
+    display: grid;
+    grid-gap: 20px;
+    justify-items: center;
+
+    background-color: whitesmoke;
+
+    border-radius: 10px;
+  }
+
+  .dropdown {
+    margin-top: 60px;
+
+    width: 320px;
+
+    display: inline-grid;
+    align-content: center;
+    text-align: start;
+
+    border-radius: 10px;
+    background-color: cadetblue;
+  }
+
+  .description-1 {
+    width: 320px;
+    height: 160px;
+
+    display: block;
+
+    border-radius: 10px;
+    background-color: cadetblue;
+  }
+
+  button {
+    width: 70%;
+    height: 40px;
+
+    font-size: large;
+
+    border-radius: 10px;
+    border: 0;
+    background-color: #fe6d73;
+  }
+
+  .partners {
+    width: 320px;
+
+    margin: 80px 0 20px 0;
+
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .partners .first-row, .second-row{
+    display: inline-flex;
+
+    justify-content: center;
+
+  }
+
+  .partner {
+    width: 80px;
+    height: 60px;
+
+    margin: 0 10px;
+
+    background-color: cadetblue;
+  }
+
+  footer {
+    height: 100px;
+  }
+}

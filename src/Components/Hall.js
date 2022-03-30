@@ -1,15 +1,12 @@
-import {Component} from "react";
-import '../Styles/Halle.css'
+import '../Styles/Hall.css';
 
-class Halle extends Component{
-    render(){
+const Hall = ({seats}) => {
         return(
             <div className={'hall'}>
                 <p>halle 5</p>
                 <div className={'seats'}/>
             </div>
         )
-    }
 }
 
-export default Halle;
+export default Hall;

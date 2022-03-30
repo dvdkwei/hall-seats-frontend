@@ -1,8 +1,11 @@
 import './Styles/App.css';
 import down from './icons8-down-24.png';
-import Halle from "./Components/Halle";
+import Hall from "./Components/Hall";
+// import {useState} from "react";
 
-function App() {
+const App = () => {
+    // const [seats, setSeats] = useState([]);
+
     return (
         <div className="App">
             <header className="App-header">
@@ -12,7 +15,7 @@ function App() {
                 </nav>
             </header>
             <div className={'main-container'}>
-                <Halle/>
+                <Hall/>
                 <div className={'dropdown'}>
                     <p>&nbsp;Wahlbereich</p>
                 </div>

@@ -1,0 +1,40 @@
+.seats{
+    height: 60vh;
+    width: 60vw;
+    padding: 10px;
+
+    display: flex;
+
+    /*justify-content: center;*/
+
+    overflow-y: scroll;
+    background-color: cadetblue;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+table{
+    border-spacing: 3px;
+    width: max-content;
+    height: max-content;
+    color: black;
+}
+
+td{
+    border: 1px solid black;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+
+    margin: 3px;
+}
+
+td:hover {
+    cursor: pointer;
+    background-color: #fe6d73;
+}

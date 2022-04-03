@@ -8,23 +8,25 @@
     justify-content: center;
 
     overflow: hidden;
-    background-color: cadetblue;
+    background-color: #FFDAC7;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) -1px 1px;
 }
 
 .table-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
 table{
     border-spacing: 3px;
+
     width: max-content;
     height: max-content;
-    color: black;
 
-    /*border: 1px black solid;*/
+    z-index: 20;
+    color: black;
 }
 
 td{
@@ -39,4 +41,11 @@ td{
 td:hover {
     cursor: pointer;
     background-color: #fe6d73;
+}
+
+@media only screen and (max-width: 600px){
+     .seats {
+         width: 300px;
+         height: 50vh;
+     }
 }

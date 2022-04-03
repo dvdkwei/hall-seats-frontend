@@ -11,11 +11,11 @@ nav {
   align-items: center;
   justify-content: center;
 
-  background-color: #fe6d73;
-  color: whitesmoke;
+  background-color: #FFDAC7;
+  color: #297F87;
 
   font-family: "Helvetica Neue", sans-serif;
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: bold;
   font-style: italic;
   font-stretch: extra-expanded;
@@ -35,29 +35,18 @@ nav {
   grid-gap: 20px;
   justify-items: center;
 
-  background-color: whitesmoke;
+  background-color: #F4EEED;
 
   border-radius: 10px;
 }
 
 .hall {
   display: grid;
+
   justify-content: center;
   text-align: center;
+
   color: rgba(0, 0, 0, 0.6);
-}
-
-.dropdown {
-  margin-top: 60px;
-
-  width: 60vw;
-
-  display: inline-grid;
-  align-content: center;
-  text-align: start;
-
-  border-radius: 10px;
-  background-color: cadetblue;
 }
 
 .description-1 {
@@ -67,18 +56,30 @@ nav {
   display: block;
 
   border-radius: 10px;
-  background-color: cadetblue;
+  background-color: #FFDAC7;
 }
 
 button {
-  width: 40vw;
+  width: 30vw;
   height: 40px;
 
-  font-size: large;
+  font-size: x-large;
+  font-weight: bold;
 
   border-radius: 10px;
   border: 0;
-  background-color: #fe6d73;
+
+  background-color: #FFDAC7;
+  color: #297F87;
+
+  box-shadow: rgba(0, 0, 0, 0.2) -1px 1px;
+}
+
+button:hover {
+  cursor: pointer;
+
+  background-color: #297F87;
+  color: #FFDAC7;
 }
 
 .partners {
@@ -104,7 +105,9 @@ button {
 
   margin: 0 10px;
 
-  background-color: cadetblue;
+  background-color: burlywood;
+
+  border-radius: 10px;
 }
 
 footer {
@@ -112,7 +115,7 @@ footer {
 }
 
 @media only screen and (max-width: 600px){
-  .dropdown, .description-1, .partners {
+  .description-1, .partners {
     width: 320px;
   }
 
@@ -123,14 +126,5 @@ footer {
   .partner {
     width: 80px;
     height: 60px;
-  }
-
-  .seats-container {
-    height: 450px;
-    width: 320px;
-
-    display: block;
-
-    background-color: cadetblue;
   }
 }

@@ -1,11 +1,22 @@
 import './Styles/App.css';
 import down from './icons8-down-24.png';
+
 import {
     // useEffect,
-    useState} from "react";
+    useState
+} from "react";
+
 import Seats from "./Components/Seats";
+import {Partners} from "./Components/Partners";
+import Dropdown from "./Components/Dropdown";
 
 
+/**
+ * Kürzzeitige Methode zum Generieren von Saalplätze
+ * @param width Breite der Saalplätze
+ * @param height Länge der Saalplätze
+ * @returns {*[]} Ein Array von Saalplätze
+ */
 const generateSeats = (width = 50, height = 60) => {
     let seats = [];
     let idCounter = 0;
@@ -18,7 +29,7 @@ const generateSeats = (width = 50, height = 60) => {
                 x: j,
                 y: i,
                 status: Math.round((Math.random())),
-                category: Math.round((Math.random() * 4) + 1)
+                category: Math.round((Math.random() * 4))
             });
         }
         seats.push(row);
@@ -30,12 +41,10 @@ const generateSeats = (width = 50, height = 60) => {
 const App = () => {
     const [seats,
         // setSeats
-        ] = useState([generateSeats()]);
+    ] = useState([generateSeats()]);
 
-    // useEffect(fetch('https://www.api.org/seats')
-    //             .then(data => data.json())
-    //             .then(seats => setSeats(seats))
-    //             .catch(console.log), []);
+    // useEffect(fetch('https://www.api.org/seats').then(data => data.json())
+    //                      .then(seats => setSeats(seats)).catch(console.log), []);
 
     return (
         <div className="App">
@@ -50,22 +59,10 @@ const App = () => {
                     <p>halle 5</p>
                     <Seats seats={seats}/>
                 </div>
-                <div className={'dropdown'}>
-                    <p>&nbsp;Wahlbereich</p>
-                </div>
+                <Dropdown/>
                 <div className={'description-1'}/>
-                <button>Auswählen</button>
-                <div className={'partners'}>
-                    <div className={'first-row'}>
-                        <div className={'partner'}/>
-                        <div className={'partner'}/>
-                        <div className={'partner'}/>
-                    </div>
-                    <div className={'second-row'}>
-                        <div className={'partner'}/>
-                        <div className={'partner'}/>
-                    </div>
-                </div>
+                <button>auswählen</button>
+                <Partners/>
             </div>
 
             <footer>

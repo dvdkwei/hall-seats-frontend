@@ -5,16 +5,16 @@
 
     display: flex;
 
-    /*justify-content: center;*/
+    justify-content: center;
 
-    overflow-y: scroll;
+    overflow: hidden;
     background-color: cadetblue;
 }
 
 .table-container {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -23,6 +23,8 @@ table{
     width: max-content;
     height: max-content;
     color: black;
+
+    /*border: 1px black solid;*/
 }
 
 td{

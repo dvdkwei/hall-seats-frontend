@@ -4,7 +4,6 @@ import {
     // useEffect,
     useState} from "react";
 import Seats from "./Components/Seats";
-// import Chart from "./Components/Chart";
 
 
 const generateSeats = (width = 50, height = 60) => {
@@ -19,7 +18,7 @@ const generateSeats = (width = 50, height = 60) => {
                 x: j,
                 y: i,
                 status: Math.round((Math.random())),
-                category: Math.round((Math.random() * 6) + 1)
+                category: Math.round((Math.random() * 4) + 1)
             });
         }
         seats.push(row);
@@ -37,7 +36,6 @@ const App = () => {
     //             .then(data => data.json())
     //             .then(seats => setSeats(seats))
     //             .catch(console.log), []);
-
 
     return (
         <div className="App">

@@ -1,7 +1,7 @@
 .dropdown {
     margin-top: 60px;
 
-    width: 60vw;
+    width: 100%;
 
     display: grid;
     align-content: center;
@@ -20,7 +20,7 @@
 }
 
 .dropdown #area-list{
-    width: inherit;
+    width: 60vw;
     background-color: #F4EEED;
 
     position: absolute;

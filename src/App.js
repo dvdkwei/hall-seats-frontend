@@ -8,8 +8,6 @@ import {
 
 import Seats from "./Components/Seats";
 import {Partners} from "./Components/Partners";
-import Dropdown from "./Components/Dropdown";
-
 
 /**
  * Kürzzeitige Methode zum Generieren von Saalplätze
@@ -59,15 +57,11 @@ const App = () => {
                     <p>halle 5</p>
                     <Seats seats={seats}/>
                 </div>
-                <Dropdown/>
-                <div className={'description-1'}/>
+                <div className={'artist-description'}/>
                 <button>auswählen</button>
                 <Partners/>
             </div>
-
-            <footer>
-
-            </footer>
+            <footer/>
         </div>
     );
 }

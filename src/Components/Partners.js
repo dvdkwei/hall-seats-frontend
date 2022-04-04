@@ -1,4 +1,4 @@
-export const Partners = () => {
+const Partners = () => {
     return(
         <div className={'partners'}>
             <div className={'first-row'}>
@@ -13,3 +13,5 @@ export const Partners = () => {
         </div>
     )
 }
+
+export {Partners};

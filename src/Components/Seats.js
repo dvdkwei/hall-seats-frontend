@@ -2,6 +2,7 @@ import '../Styles/Seats.css';
 
 import {useGesture} from "@use-gesture/react";
 import {useRef, useState} from "react";
+import Dropdown from "./Dropdown";
 
 /**
  * Konvertierung eines Arrays von Saalplätzen zu einer Body-Tabelle
@@ -42,18 +43,6 @@ const seatsToTableBody = (seats, width, height) => {
     return <tbody>{tbody}</tbody>;
 }
 
-/**
- * Pan und Zomm in einen bestimmten Bereich
- * @param xCoordinate X-Koordinat
- * @param yCoordinate Y-Koordinat
- */
-export const zoomToArea = (xCoordinate, yCoordinate) => {
-    document.getElementById('table').style.left = (-xCoordinate + 50) + 'px';
-    document.getElementById('table').style.top = (-yCoordinate + 50) + 'px';
-    document.getElementById('table').style.transform = 'scale(3)';
-}
-
-
 const Seats = ({seats}) => {
     const [animation, setAnimation] = useState({x: 0, y: 0, scale: .45});
 
@@ -88,21 +77,34 @@ const Seats = ({seats}) => {
     });
 
     return (
-        <div className={'seats'}>
-            <div className={'table-container'}>
-                <table
-                    ref={tableRef}
-                    style={{
-                        left: animation.x,
-                        top: animation.y,
-                        transform: `scale(${animation.scale})`,
-                        position: 'relative',
-                        touchAction: 'none', //wichtig für UseGesture
-                    }}
-                >
-                    {seatsToTableBody(seats[0], maxTableWidth, maxTableHeight)}
-                </table>
+        <div style={{width: '60vw'}}>
+            <div className={'seats'}>
+                <div className={'table-container'}>
+                    <table
+                        ref={tableRef}
+                        style={{
+                            left: animation.x,
+                            top: animation.y,
+                            transform: `scale(${animation.scale})`,
+                            position: 'relative',
+                            touchAction: 'none', //wichtig für UseGesture
+                        }}
+                    >
+                        {seatsToTableBody(seats[0], maxTableWidth, maxTableHeight)}
+                    </table>
+                </div>
             </div>
+            <div style={{
+                marginTop: '30px',
+                display: 'inline-flex',
+                textAlign: 'left',
+                columnGap: '30px'
+            }}>
+                <p>x: {animation.x}</p>
+                <p>y: {animation.y}</p>
+                <p>scale: {animation.scale}</p>
+            </div>
+            <Dropdown setAnimation={setAnimation}/>
         </div>
     )
 }

@@ -77,7 +77,11 @@ const Seats = ({seats}) => {
     });
 
     return (
-        <div style={{width: '60vw'}}>
+        <div style={{
+            width: 'inherit',
+            display: 'grid',
+            justifyItems: 'center'
+        }}>
             <div className={'seats'}>
                 <div className={'table-container'}>
                     <table
